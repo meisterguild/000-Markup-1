@@ -27,9 +27,13 @@ export const SideMenu = () => {
 }
 export default SideMenu;
 
-const StyledSubMenu = styled.div`
+const StyledSubMenu = styled.header`
   .SideMenu {
-    width: 200px;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 300px;
+    height: 100%;
     margin: 0 5.5rem 0 4.5rem;
 
     .Title {

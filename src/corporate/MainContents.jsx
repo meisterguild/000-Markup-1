@@ -8,7 +8,9 @@ export const MainContents = () => {
   return (
     <StyledMainContents>
       <div className='MainContent'>
-        <video className='Video' autoplay src="./assets/video/video.mp4"></video>
+        <div className="VideoBox">
+          <video src="./assets/video/video.mp4" className='Video' type="video/mp4" loop autoPlay muted />
+        </div>
         <div className='Main'>
           <ConstructionCase></ConstructionCase>
           <Flow></Flow>
@@ -16,24 +18,29 @@ export const MainContents = () => {
           <Footer></Footer>
         </div>
       </div>
-    </StyledMainContents>
+    </StyledMainContents >
   )
 }
 export default MainContents;
 
 const StyledMainContents = styled.div`
   .MainContent {
-    width: 100%;
-    padding: 0 2rem;
-    text-align: center;
     font-size: 2.8rem;
 
-    .Video {
-      max-width: 100%;
+    .VideoBox {
+      width: 100%;
+      height: 100vh;
+
+      .Video {
+        position: fixed;
+        top: -20rem;
+        z-index: -5;
+      }
     }
 
     .Main {
-      margin: 0 auto;
+      text-align: center;
+      width: 100%;
     }
   }
 `

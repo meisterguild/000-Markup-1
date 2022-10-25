@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 const BREAK_POINTS = {
   pcMaxWidth: 1920, // PC最大幅
-  pc: 1025, // PC
+  pc: 960, // PC
   tab: 768, // タブレット
   sp: 767, // スマホ
   spMinimumWidth: 320, // スマホ最小幅
@@ -28,7 +28,7 @@ export const media = {
   `,
 
   tabOnly: (...args) => css`
-    @media (min-width: ${BREAK_POINTS.tab}px and max-width: ${BREAK_POINTS.pc-1}px) {
+    @media (min-width: ${BREAK_POINTS.tab}px and max-width: ${BREAK_POINTS.pc - 1}px) {
       ${css(...args)}
     }
   `,

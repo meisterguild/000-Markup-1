@@ -7,11 +7,11 @@ import GlobalStyle from 'styles/global/GlobalStyle';
 export const Home = () => {
   return (
     <StyledHome>
-      <body id="Home" className='Home'>
+      <div id="Home" className='Home'>
         <GlobalStyle></GlobalStyle>
         <SideMenu></SideMenu>
         <MainContents></MainContents>
-      </body>
+      </div>
     </StyledHome>
   )
 }
@@ -19,12 +19,6 @@ export default Home;
 
 const StyledHome = styled.div`
   .Home {
-    margin-top: 4rem;
+    margin-left: 300px;
   }
-
-  ${({ theme }) => theme.media.pcAndTab`
-  .Home {
-    display: flex;
-    justify-content: center;  
-  `}
 `

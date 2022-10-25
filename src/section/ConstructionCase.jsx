@@ -6,33 +6,34 @@ export const ConstructionCase = () => {
       <div className="ConstructionCase">
         <div className="ImageGroup">
           <h1>建築事例を紹介</h1>
-          <img src="./assets/img/project1.jpg" alt="project1" />
-          <img src="./assets/img/project2.jpg" alt="project2" />
-          <img src="./assets/img/project3.jpg" alt="project3" />
-          <img src="./assets/img/project4.jpg" alt="project4" />
+          <a href="#Home"><img src="./assets/img/project1.jpg" alt="project1" /></a>
+          <a href="#Home"><img src="./assets/img/project2.jpg" alt="project2" /></a>
+          <a href="#Home"><img src="./assets/img/project3.jpg" alt="project3" /></a>
+          <a href="#Home"><img src="./assets/img/project4.jpg" alt="project4" /></a>
         </div>
         <div className="Feature">
           <h1>明るいHOUSEの特徴</h1>
           <div className="CircleGroup">
             <div>
-              <div className="Circle">design</div>
+              <div className="Circle">
+                <button className="CircleSwipe">design</button></div>
               <div className="Strong">デザイン</div>
               <div>テキストテキストテキスト</div>
             </div>
             <div>
-              <div className="Circle">quality</div>
+              <div className="Circle"><button className="CircleSwipe">quality</button></div>
               <div className="Strong">性能</div>
               <div>テキストテキストテキスト</div>
             </div>
             <div>
-              <div className="Circle">support</div>
+              <div className="Circle"><button className="CircleSwipe">support</button></div>
               <div className="Strong">サポート</div>
               <div>テキストテキストテキスト</div>
             </div>
           </div>
         </div>
       </div>
-    </StyledConstructionCase>
+    </StyledConstructionCase >
   )
 }
 export default ConstructionCase;
@@ -41,6 +42,7 @@ const StyledConstructionCase = styled.section`
   .ConstructionCase {
     padding: 8rem 0 16rem;
     background: linear-gradient(#5454544D, #505050B3, #000000CC);
+    background-size: 100% 100%;
 
     h1 {
       width: 100%;
@@ -74,6 +76,8 @@ const StyledConstructionCase = styled.section`
       
       img {
         width: 402px;
+        border: 1px solid WHITE;
+        box-shadow: inset 0 -0.3rem 0 #2E2E2E;
 
         :nth-of-type(n+3) {
           margin-top: 5rem;
@@ -97,11 +101,42 @@ const StyledConstructionCase = styled.section`
           margin: 0 auto;
 
           .Circle {
-            box-sizing: border-box;
-            padding: 11.8rem 10.7rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid WHITE;
-            border-radius: 50%;
+            width: 100%;
+
+            .CircleSwipe {
+              position: relative;
+              display: block;
+              width: 100%;
+              max-width: 258px;
+              max-height: 258px;
+              overflow: hidden;
+              padding: 11.8rem 10.7rem;
+              margin-bottom: 1.5rem;
+              border: 1px solid WHITE;
+              border-radius: 50%;
+              background-color: transparent;
+
+              &:before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                background-color: WHITE;
+                box-sizing: border-box;
+                content: "";
+                transform: translateX(-100%);
+                transition: transform 0.5s ease-in-out;
+              }
+
+              &:hover {
+                cursor: pointer;
+                &:before {
+                  transform: translateX(0);
+                }
+              }
+            }
           }
 
           .Strong {
