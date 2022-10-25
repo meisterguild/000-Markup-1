@@ -8,8 +8,8 @@ export const MainContents = () => {
   return (
     <StyledMainContents>
       <div className='MainContent'>
-        <video className='video' autoplay src="./assets/video/video.mp4"></video>
-        <div className='main'>
+        <video className='Video' autoplay src="./assets/video/video.mp4"></video>
+        <div className='Main'>
           <ConstructionCase></ConstructionCase>
           <Flow></Flow>
           <Contact></Contact>
@@ -28,11 +28,11 @@ const StyledMainContents = styled.div`
     text-align: center;
     font-size: 2.8rem;
 
-    .video {
+    .Video {
       max-width: 100%;
     }
 
-    .main {
+    .Main {
       margin: 0 auto;
     }
   }

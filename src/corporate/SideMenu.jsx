@@ -3,23 +3,23 @@ import styled from "styled-components";
 export const SideMenu = () => {
   return (
     <StyledSubMenu>
-      <div className='sideMenu'>
-        <h2 className='title'>
+      <div className='SideMenu'>
+        <h2 className='Title'>
           <img src='./assets/img/favicon.ico' alt="" />
           <p>明るい　HOUSE</p>
         </h2>
-        <ul className='contentsList'>
-          <li>私たちについて</li>
-          <li>サービス</li>
-          <li>商品情報</li>
-          <li>展示会</li>
-          <li>暮らしの日記</li>
-          <li>会社概要</li>
+        <ul className='ContentsList'>
+          <li><a href="#Home">私たちについて</a></li>
+          <li><a href="#Home">サービス</a></li>
+          <li><a href="#Home">商品情報</a></li>
+          <li><a href="#Home">展示会</a></li>
+          <li><a href="#Home">暮らしの日記</a></li>
+          <li><a href="#Home">会社概要</a></li>
         </ul>
-        <ul className='snsList'>
-          <li>Twitter</li>
-          <li>facebook</li>
-          <li>instagram</li>
+        <ul className='SnsList'>
+          <li><a href="#Home">Twitter</a></li>
+          <li><a href="#Home">facebook</a></li>
+          <li><a href="#Home">instagram</a></li>
         </ul>
       </div>
     </StyledSubMenu>
@@ -28,28 +28,28 @@ export const SideMenu = () => {
 export default SideMenu;
 
 const StyledSubMenu = styled.div`
-  .sideMenu {
+  .SideMenu {
     width: 200px;
     margin: 0 5.5rem 0 4.5rem;
 
-    .title {
+    .Title {
       display: flex;
       font-size: 2rem;
       align-items: center;
     }
 
-    .contentsList,
-    .snsList {
+    .ContentsList,
+    .SnsList {
       font-size: 1.4rem;
       li:not(:first-child) {
         margin-top: 1.6rem;
       }
     }
 
-    .contentsList {
+    .ContentsList {
       margin-top: 3.8rem;
     }
-    .snsList {
+    .SnsList {
       margin-top: 7.6rem;
     }
 `
