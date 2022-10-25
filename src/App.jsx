@@ -6,12 +6,9 @@ import 'styles/reset.css'
 
 const App = () => {
   return (
-    // React.Fragmentは、DOMに追加されない空のタグ。<></>と書くこともできる。
-    <React.Fragment>
-      <ThemeProvider theme={theme}>
-        <Top />
-      </ThemeProvider>
-    </React.Fragment>
+    <ThemeProvider theme={theme}>
+      <Top />
+    </ThemeProvider>
   )
 }
 

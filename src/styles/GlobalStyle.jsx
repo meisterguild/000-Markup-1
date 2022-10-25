@@ -5,8 +5,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
   body {
-    font-size: 1.6rem;
-    font-family: sans-serif;
+    font-size: ${({ theme }) => theme.FONT_SIZE.M};
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
+    font-family: ${({ theme }) => theme.FONT_FAMILY};
     color: ${(props) => props.theme.COLORS.BLACK};
   }
 `
