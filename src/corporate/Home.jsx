@@ -19,6 +19,12 @@ export default Home;
 
 const StyledHome = styled.div`
   .Home {
-    margin-left: 300px;
+    width: 100%;
   }
+
+  ${({ theme }) => theme.media.pcOnly` 
+    .Home {
+      margin-left: 300px;
+  }
+  `}
 `

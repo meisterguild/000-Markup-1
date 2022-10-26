@@ -27,6 +27,12 @@ export const media = {
     }
   `,
 
+  spAndTab: (...args) => css`
+    @media (max-width: ${BREAK_POINTS.pc - 1}px) {
+      ${css(...args)}
+    }
+  `,
+
   tabOnly: (...args) => css`
     @media (min-width: ${BREAK_POINTS.tab}px and max-width: ${BREAK_POINTS.pc - 1}px) {
       ${css(...args)}
