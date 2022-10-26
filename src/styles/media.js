@@ -1,13 +1,18 @@
 import { css } from 'styled-components'
 
-const BREAK_POINTS = {
+export const BREAK_POINTS = {
   tb: 768,
   pc: 960,
 }
 
 export const media = {
+  sp: (...args) => css`
+    @media (max-width: ${BREAK_POINTS.tb - 1}px) {
+      ${css(...args)}
+    }
+  `,
   tb: (...args) => css`
-    @media (max-width: ${BREAK_POINTS.tb}px) {
+    @media (min-width: ${BREAK_POINTS.tb}px) {
       ${css(...args)}
     }
   `,

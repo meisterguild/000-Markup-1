@@ -16,7 +16,12 @@ export const theme = {
     PRIMARY: '#FFDD00',
     SECONDARY: '#F3E729',
   },
-  FONT_SIZES: {
+  Z_INDEX: {
+    HEADER: 10,
+    HAMBURGER: 30,
+    NAV_MENU: 20,
+  },
+  FONT_SIZE: {
     XS: '1.2rem',
     S: '1.4rem',
     M: '1.6rem',
@@ -24,7 +29,7 @@ export const theme = {
     XL: '2.4rem',
     XXL: '2.8rem',
   },
-  FONT_WEIGHTS: {
+  FONT_WEIGHT: {
     LIGHT: 300,
     REGULAR: 400,
     MEDIUM: 500,
