@@ -18,8 +18,7 @@ export const theme = {
   },
   Z_INDEX: {
     HEADER: 10,
-    HAMBURGER: 30,
-    NAV_MENU: 20,
+    HAMBURGER: 20,
   },
   FONT_SIZE: {
     XS: '1.2rem',
@@ -35,6 +34,7 @@ export const theme = {
     MEDIUM: 500,
     BOLD: 700,
   },
+  HEADER_HEIGHT: '72px',
   FONT_FAMILY: "'Noto Sans JP', sans-serif",
   media,
 }

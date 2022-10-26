@@ -4,7 +4,7 @@ import { BaseLayout } from 'components/layout/BaseLayout'
 export const Top = () => {
   return (
     <StyledTop>
-      <BaseLayout />
+      <BaseLayout></BaseLayout>
     </StyledTop>
   )
 }

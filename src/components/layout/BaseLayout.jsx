@@ -1,29 +1,40 @@
-import { BaseSideBar } from 'components/layout/BaseSideBar'
 import { Header } from 'components/layout/Header'
-
-import { useMedia } from 'hooks'
+import { Footer } from 'components/layout/Footer'
 
 import styled from 'styled-components'
 
 export const BaseLayout = ({ children }) => {
-  const { isPc } = useMedia()
   return (
     <StyledBaseLayout>
-      {!isPc && <Header />}
-      <BaseSideBar Sidebar={<Header />}>
+      <Header />
+      <div className='container'>
         <main>{children}</main>
-      </BaseSideBar>
-      {/* <Footer /> */}
+        <Footer />
+      </div>
     </StyledBaseLayout>
   )
 }
 
 const StyledBaseLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: #777;
-  main {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: green;
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
   }
+  ${({ theme }) => theme.media.pc`
+    display: flex;
+    justify-content: space-between;
+    .container {
+      width: calc(100% - 300px);
+      margin-left: 300px;
+    }
+  `}
 `
