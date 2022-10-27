@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useMedia } from 'hooks'
+import { Link } from 'react-router-dom'
 
 import logo from 'assets/images/logo.svg'
 import { Hamburger } from 'components/ui'
@@ -14,7 +15,9 @@ export const Header = ({ className }) => {
   return (
     <StyledHeader className={`${className ?? ''}`}>
       <h1 className='title'>
-        <img src={logo} alt='明るいHOUSE' className='logo' />
+        <Link to='/'>
+          <img src={logo} alt='明るいHOUSE' className='logo' />
+        </Link>
       </h1>
       {!isPc && <Hamburger onClick={toggleIsOpen} className={`${isOpen ? 'open' : ''}`} />}
       {isOpen && <div onClick={toggleIsOpen} className='overlay'></div>}

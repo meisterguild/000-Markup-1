@@ -1,10 +1,13 @@
+import { BackgroundVideo } from 'components/model/BackgroundVideo'
+import { Projects } from 'components/model/Projects'
+
 import styled from 'styled-components'
-import { BaseLayout } from 'components/layout/BaseLayout'
 
 export const Top = () => {
   return (
     <StyledTop>
-      <BaseLayout></BaseLayout>
+      <BackgroundVideo />
+      <Projects />
     </StyledTop>
   )
 }

@@ -16,6 +16,7 @@ const StyledFooter = styled.footer`
   padding: 20px 0;
   background-color: ${({ theme }) => theme.COLORS.BLACK90};
   color: ${({ theme }) => theme.COLORS.WHITE100};
+  z-index: ${({ theme }) => theme.Z_INDEX.FOOTER};
   .copyright {
     font-size: ${({ theme }) => theme.FONT_SIZE.XS};
     text-align: center;

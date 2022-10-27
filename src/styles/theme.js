@@ -19,6 +19,8 @@ export const theme = {
   Z_INDEX: {
     HEADER: 10,
     HAMBURGER: 20,
+    BACKGROUND: -10,
+    FOOTER: 10,
   },
   FONT_SIZE: {
     XS: '1.2rem',
