@@ -10,4 +10,12 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.FONT_FAMILY};
     color: ${(props) => props.theme.COLORS.BLACK};
   }
+  .wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    ${({ theme }) => theme.media.pc`
+      padding: 80px 20px;
+    `}
+  }
 `

@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const ProjectCard = ({ className, project }) => {
-  const { id, name, src, alt } = project
+  const { name, src, alt } = project
+  // const { id, name, src, alt } = project
   return (
     // <Link to={`/project/${id}`}>
     <Link to='/'>

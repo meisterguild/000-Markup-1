@@ -21,11 +21,6 @@ const StyledBaseLayout = styled.div`
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
   }
   ${({ theme }) => theme.media.pc`
     .container {
