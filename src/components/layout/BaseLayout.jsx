@@ -19,10 +19,8 @@ const StyledBaseLayout = styled.div`
   .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    background-color: green;
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -30,8 +28,6 @@ const StyledBaseLayout = styled.div`
     }
   }
   ${({ theme }) => theme.media.pc`
-    display: flex;
-    justify-content: space-between;
     .container {
       width: calc(100% - 300px);
       margin-left: 300px;

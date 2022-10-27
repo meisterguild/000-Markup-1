@@ -34,7 +34,6 @@ export const theme = {
     MEDIUM: 500,
     BOLD: 700,
   },
-  HEADER_HEIGHT: '72px',
   FONT_FAMILY: "'Noto Sans JP', sans-serif",
   media,
 }
