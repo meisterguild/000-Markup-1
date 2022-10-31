@@ -186,5 +186,37 @@ const StyledFlow = styled.section`
         }
       }
     }
+
+  ${({ theme }) => theme.media.spAndTab` 
+    .Flow {
+      padding-right: 2rem;
+      padding-left: 2rem;
+
+      h1 {
+        font-size: 2rem;
+        
+        &:before, &:after {
+          width: 6rem;
+        }
+      }
+      .Flowchart {
+        flex-direction: column;
+        justify-content: center;
+
+        .Chart {
+          width: 295px;
+          margin: 0 auto 5rem;
+
+          div {
+            &:before {
+              border-left: 14.7rem solid transparent;
+              border-right: 14.7rem solid transparent;
+              border-top: 3rem solid #414141;
+            }
+          }
+        }
+      }
+    }
+  `}
   }
 `

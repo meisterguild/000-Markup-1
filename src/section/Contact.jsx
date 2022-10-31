@@ -109,5 +109,31 @@ const StyledContact = styled.section`
         }
       }
     }
-  }
+
+  ${({ theme }) => theme.media.spAndTab` 
+      .Contact {
+        padding-right: 2rem;
+        padding-left: 2rem;
+
+        h1 {
+          font-size: 2rem;
+          &:before, &:after {
+            width: 6rem;
+          }
+        }
+
+        .TypeList {
+          flex-direction: column;
+          justify-content: center;
+
+          button {
+            &:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  `}
 `

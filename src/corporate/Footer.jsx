@@ -36,6 +36,8 @@ const StyledFooter = styled.footer`
       font-size: 1.4rem;
 
       a {
+        margin-bottom: 1rem;
+
         &:not(:first-child) {
           padding-left: 2rem;
         }
@@ -51,5 +53,14 @@ const StyledFooter = styled.footer`
       margin-top: 6rem;
       font-size: 1.2rem;
     }
+
+    ${({ theme }) => theme.media.spAndTab` 
+      .List {
+        margin: 0 4.5rem;
+        flex-wrap: wrap; 
+        
+        }
+      }
+    `}
   }
 `

@@ -43,6 +43,7 @@ const StyledConstructionCase = styled.section`
     padding: 8rem 0 16rem;
     background: linear-gradient(#5454544D, #505050B3, #000000CC);
     background-size: 100% 100%;
+    margin-left: 300px;
 
     h1 {
       width: 100%;
@@ -105,7 +106,6 @@ const StyledConstructionCase = styled.section`
 
             .CircleSwipe {
               position: relative;
-              display: block;
               width: 100%;
               max-width: 258px;
               max-height: 258px;
@@ -147,5 +147,36 @@ const StyledConstructionCase = styled.section`
         }
       }
     }
+
+    ${({ theme }) => theme.media.spAndTab` 
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin-left: 0;
+
+      h1 {
+        font-size: 2rem;
+
+        &:before, &:after {
+          width: 6rem;
+        }
+      }
+      .Feature {
+        .CircleGroup {
+          div {
+            &:not(:last-child) {
+              margin-right: 2rem;
+            }
+
+            .Circle {
+              .CircleSwipe {
+                padding: 4rem 2.8rem;
+                max-width: 100px;
+                max-height: 100px;
+              }
+            }
+          }
+        }
+      }
+    `}
   }
 `
