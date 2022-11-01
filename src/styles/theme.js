@@ -19,12 +19,14 @@ export const theme = {
   BACKGROUND: {
     BLACK_NONE: '#00000000',
     BLACK_OPACITY: '#000000cc',
+    WHITE: '#FFFFFF',
   },
   Z_INDEX: {
     HEADER: 10,
     HAMBURGER: 20,
     BACKGROUND: -10,
     FOOTER: 5,
+    SCROLL_TOP: 8,
   },
   FONT_SIZE: {
     XS: '1.2rem',

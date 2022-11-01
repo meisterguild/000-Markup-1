@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useMedia } from 'hooks'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from 'assets/images/logo.svg'
@@ -12,6 +13,18 @@ export const Header = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleIsOpen = () => setIsOpen(!isOpen)
   const { isPc } = useMedia()
+  const stopScrollingBackContent = () => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+    }
+    return () => {
+      document.body.style.overflow = 'visible'
+      document.documentElement.style.overflow = 'visible'
+    }
+  }
+
+  useEffect(stopScrollingBackContent, [isOpen])
   return (
     <StyledHeader className={`${className ?? ''}`}>
       <h1 className='title'>

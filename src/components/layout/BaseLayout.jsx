@@ -1,6 +1,8 @@
 import { Header } from 'components/layout/Header'
 import { Footer } from 'components/layout/Footer'
 
+import { ScrollTop } from 'components/ui'
+
 import styled from 'styled-components'
 
 export const BaseLayout = ({ children }) => {
@@ -11,6 +13,7 @@ export const BaseLayout = ({ children }) => {
         <main>{children}</main>
         <Footer />
       </div>
+      <ScrollTop />
     </StyledBaseLayout>
   )
 }

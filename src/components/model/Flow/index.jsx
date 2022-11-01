@@ -23,7 +23,7 @@ export const Flow = ({ className }) => {
 
 const StyledFlows = styled.section`
   width: 100%;
-  background-color: ${({ theme }) => theme.COLORS.WHITE100};
+  background-color: ${({ theme }) => theme.BACKGROUND.WHITE};
   .flow {
     &-desc {
       margin-bottom: 30px;

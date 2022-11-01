@@ -1,8 +1,7 @@
 import { Fragment } from 'react'
+import { Title } from 'components/ui'
 
 import { features } from 'components/model/Features/data'
-
-import { Title } from 'components/ui'
 import { FeatureCard } from 'components/model/Features/FeatureCard'
 
 import styled from 'styled-components'
