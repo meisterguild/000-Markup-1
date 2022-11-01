@@ -59,9 +59,7 @@ const StyledFooter = styled.footer`
     width: 100%;
 
       .List {
-        margin: 0 4.5rem;
         flex-wrap: wrap; 
-        
         }
       }
     `}

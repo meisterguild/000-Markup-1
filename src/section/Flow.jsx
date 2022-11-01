@@ -207,16 +207,26 @@ const StyledFlow = styled.section`
         justify-content: center;
 
         .Chart {
-          width: 295px;
+          width: 420px;
           margin: 0 auto 5rem;
 
           div {
+            &:not(:last-child) {
+              &:after {
+                left: 44%;
+              }
+            }
+
             &:before {
-              border-left: 14.7rem solid transparent;
-              border-right: 14.7rem solid transparent;
+              border-left: 21rem solid transparent;
+              border-right: 21rem solid transparent;
               border-top: 3rem solid #414141;
             }
           }
+        }
+
+        .SequentialOrderGroup {
+          margin: 7rem auto 0;
         }
       }
     }

@@ -161,6 +161,12 @@ const StyledConstructionCase = styled.section`
           width: 6rem;
         }
       }
+      
+      .ImageGroup {        
+        img {
+          width: 100%;
+        }
+      }
       .Feature {
         .CircleGroup {
           div {
