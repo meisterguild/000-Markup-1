@@ -30,7 +30,7 @@ export default Contact;
 
 const StyledContact = styled.section`
   .ContactBox {
-    width: 100%;
+    width: calc(100% - 300px);
     background-color: WHITE;
     background-size: 100% 100%;
 
@@ -111,6 +111,7 @@ const StyledContact = styled.section`
     }
 
   ${({ theme }) => theme.media.spAndTab` 
+    width: 100%;
       .Contact {
         padding-right: 2rem;
         padding-left: 2rem;

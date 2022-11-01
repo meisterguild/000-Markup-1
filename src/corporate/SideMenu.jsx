@@ -82,7 +82,7 @@ const StyledSubMenu = styled.header`
       width: 100%;
       height: 7.2rem;
       margin: 0;
-      z-index: 1;
+      z-index: 5;
       
       .Title {
         width: 100%;

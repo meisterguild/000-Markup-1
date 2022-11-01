@@ -23,6 +23,7 @@ export default Footer;
 
 const StyledFooter = styled.footer`
   .Footer {
+    width: calc(100% - 300px);
     padding: 5rem 0 2rem;
     background-color: BLACK;
     color: WHITE;
@@ -55,6 +56,8 @@ const StyledFooter = styled.footer`
     }
 
     ${({ theme }) => theme.media.spAndTab` 
+    width: 100%;
+
       .List {
         margin: 0 4.5rem;
         flex-wrap: wrap; 

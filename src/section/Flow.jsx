@@ -62,7 +62,7 @@ export default Flow;
 
 const StyledFlow = styled.section`
   .FlowBox {
-    width: 100%;
+    width: calc(100% - 300px);
     background-color: WHITE;
     background-size: 100% 100%;
 
@@ -105,11 +105,11 @@ const StyledFlow = styled.section`
         align-items: flex-start;
         justify-content: center;
         margin-top: 6rem;
+        max-width: 900px;
 
         .Chart {
           width: 200px;
           text-align: center;
-          margin-right: 4rem;
 
           div {
             position: relative;
@@ -143,13 +143,14 @@ const StyledFlow = styled.section`
               border-right: 10rem solid transparent;
               border-top: 3rem solid #414141;
               content: '';
-              z-index: 5;
+              z-index: 3;
             }
           }
         }
 
         .SequentialOrderGroup {
-          max-Width: 610px;
+          max-Width: 560px;
+          margin-left: 4rem;
 
           .SequentialOrder {
             display: flex;
@@ -188,6 +189,8 @@ const StyledFlow = styled.section`
     }
 
   ${({ theme }) => theme.media.spAndTab` 
+    width: 100%;
+
     .Flow {
       padding-right: 2rem;
       padding-left: 2rem;
