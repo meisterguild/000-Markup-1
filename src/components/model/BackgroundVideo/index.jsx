@@ -16,14 +16,14 @@ const StyledBackgroundVideo = styled.div`
   height: 80vh;
   ${({ theme }) => theme.media.pc`
       height: 100vh;
-      `}
+  `}
   > video {
     position: fixed;
-    top: 70px; // ヘッダーの高さ
     left: 0;
+    height: 100vh;
+    object-fit: cover;
     z-index: ${({ theme }) => theme.Z_INDEX.BACKGROUND};
     ${({ theme }) => theme.media.pc`
-      top: -200px;
       left: 300px;
     `}
   }

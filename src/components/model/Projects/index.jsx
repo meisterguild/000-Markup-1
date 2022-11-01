@@ -8,7 +8,7 @@ import styled from 'styled-components'
 
 export const Projects = ({ className }) => {
   return (
-    <StyledProjects className={`${className ?? ''}`}>
+    <StyledProjects id='project' className={`${className ?? ''}`}>
       <div className='wrapper'>
         <Title value='建築事例を紹介' />
         <div className='projects-list'>

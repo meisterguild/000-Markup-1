@@ -9,7 +9,7 @@ import styled from 'styled-components'
 
 export const Features = ({ className }) => {
   return (
-    <StyledFeatures className={`${className ?? ''}`}>
+    <StyledFeatures id='feature' className={`${className ?? ''}`}>
       <div className='wrapper'>
         <Title value='明るいHOUSEの特徴' />
         <div className='features'>
@@ -24,7 +24,7 @@ export const Features = ({ className }) => {
   )
 }
 
-const StyledFeatures = styled.div`
+const StyledFeatures = styled.section`
   background-color: ${({ theme }) => theme.BACKGROUND.BLACK_OPACITY};
   .features {
     display: grid;
