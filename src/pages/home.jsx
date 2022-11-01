@@ -63,7 +63,7 @@ export const Home = () => {
           <SWrapper>
             <SContainer>
               <SHeadline>家ができるまでの流れ</SHeadline>
-              <p>お問い合わせいただいてから、家が完成するまでの流れです。</p>
+              <SP>お問い合わせいただいてから、家が完成するまでの流れです。</SP>
               ヒアリングテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
               プラン提案テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
               契約テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -73,7 +73,7 @@ export const Home = () => {
 
             <SContainer>
               <SHeadline>お問い合わせ</SHeadline>
-              <p>お問い合わせは下記からお願いいたします。</p>
+              <SP>お問い合わせは下記からお願いいたします。</SP>
               <SContactItems>
                 <SContactItem>
                   <img src={ImgDocument} alt='資料請求ロゴ' />
@@ -100,8 +100,11 @@ export const Home = () => {
 }
 
 const SDiv = styled.div`
-  width: 100%;
+  width: calc(100% - 300px);
   margin-top: 600px;
+  ${({ theme }) => theme.media.tb`
+  width: 100%;
+  `};
 `
 
 const SBackgroundGradation = styled.div`
@@ -117,19 +120,37 @@ const SVideo = styled.video`
   z-index: -10; /*最背面に設定*/
   top: 0;
   left: 300px;
+  width: auto;
+  height: 100vh;
+  ${({ theme }) => theme.media.tb`
+  height:100vh;
+  width: auto;
+  left: 0;
+  `};
 `
 
 const SWrapper = styled.div`
-  width: 960px;
+  width: clamp(500px, 100%, 960px);
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  ${({ theme }) => theme.media.tb`
+  margin-left: 20px;
+  margin-left: 20px;
+  width: calc(100% - 40px)
+  `};
 `
 
 const SContainer = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
   :last-child {
-    padding-bottom: 320px;
+    padding-bottom: 120px;
   }
+  ${({ theme }) => theme.media.tb`
+  padding-top: 60px;
+  padding-bottom: 60px;
+  `};
 `
 
 const SHeadline = styled.h2`
@@ -137,8 +158,13 @@ const SHeadline = styled.h2`
   display: flex;
   align-items: center;
   font-size: 28px;
+  font-weight: bold;
+  ${({ theme }) => theme.media.tb`
+  font-size: 20px;
+  `};
+
   :before,
-  ::after {
+  :after {
     content: '';
     height: 1px;
     background-color: ${(props) => (props.primary ? '#fff' : '#000')};
@@ -146,17 +172,30 @@ const SHeadline = styled.h2`
   }
   :before {
     margin-right: 5rem;
+    ${({ theme }) => theme.media.tb`
+    margin-right: 2rem;
+  `};
   }
   :after {
     margin-left: 5rem;
+    ${({ theme }) => theme.media.tb`
+    margin-left: 2rem;
+  `};
   }
 `
+const SP = styled.p`
+  margin-top: 30px;
+`
+
 const SGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 56px;
   row-gap: 50px;
   margin-top: 60px;
+  ${({ theme }) => theme.media.tb`
+  grid-template-columns: 1fr 
+  `};
 `
 const SThumbnail = styled.div`
   position: relative;
@@ -179,6 +218,7 @@ const SFeatures = styled.div`
   column-gap: 5%;
   margin-top: 60px;
   color: ${(props) => (props.primary ? '#fff' : '#000')};
+  width: 100%;
 `
 const SFeature = styled.div`
   text-align: center;
@@ -187,21 +227,32 @@ const SFeature = styled.div`
 const SCircle = styled.div`
   border: 1px solid #fff;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 1 00px;
   text-align: center;
   justify-content: center;
 
   display: inline-block;
+  line-height: 100px;
+
+  ${({ theme }) => theme.media.pc`
+  width: 200px;
+  height: 200px;  
   line-height: 200px;
+  `};
 `
 
 const SHeadlineCircle = styled.h3`
   color: #ffffff;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
 `
 
 const SCycleP = styled.p`
   color: #ffffff;
+  margin-top: 4px;
+  font-size: 14px;
 `
 
 const SContactItems = styled.div`
@@ -209,6 +260,10 @@ const SContactItems = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5%;
   margin-top: 60px;
+  width: 100%;
+  ${({ theme }) => theme.media.tb`
+  grid-template-columns: 1fr ;
+  `};
 `
 
 const SContactItem = styled.div`
@@ -220,6 +275,12 @@ const SContactItem = styled.div`
   height: 190px;
   font-size: 14px;
   position: relative;
+  margin-bottom: 20px;
+  ${({ theme }) => theme.media.tb`
+  grid-template-columns: 1fr ;
+  width: 200px;
+  margin : 0 auto 20px auto;
+  `};
 `
 
 const STriangle = styled.div`

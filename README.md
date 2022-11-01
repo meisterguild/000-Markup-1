@@ -30,8 +30,9 @@
 例）　 1.5 時間
 
 - 環境構築　 0.5h
-- HTML 書く、ページ切り分け
+- HTML 書く、ページ切り分け 2h
 - sideMenu 作成　 2h（styled-components 勉強こみ）
+- home にざっくり CSS 6h
 
 ### 実装時に困ったこと・検討したいこと
 

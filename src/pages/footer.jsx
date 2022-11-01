@@ -32,12 +32,14 @@ export const Footer = () => {
 
 const SDiv = styled.div`
   color: #fff;
+  width: calc(100% - 300px);
 `
 const SUl = styled.ul`
   margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const SLi = styled.li`
@@ -46,6 +48,7 @@ const SLi = styled.li`
   }
   padding-right: 20px;
   padding-left: 20px;
+  white-space: nowrap;
 `
 const SA = styled.a`
   font-size: 14px;

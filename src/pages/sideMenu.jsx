@@ -25,9 +25,9 @@ export const SideMenu = () => {
 }
 
 const SDiv = styled.div`
-  width: 300px;
   background-color: #fff;
-  height: 100svh;
+  width: 300px;
+  height: 100vh;
 `
 
 const Wrapper = styled.div`
