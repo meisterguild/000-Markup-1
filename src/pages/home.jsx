@@ -11,7 +11,7 @@ import Video from '../img/video.mp4'
 export const Home = () => {
   return (
     <>
-      <h1>明るいHOUSE</h1>
+      <SH1>明るいHOUSE</SH1>
       <SDiv>
         <SVideo src={Video} autoPlay loop muted playsInline></SVideo>
         <SBackgroundGradation>
@@ -19,19 +19,19 @@ export const Home = () => {
             <SContainer>
               <SHeadline primary>建築事例を紹介</SHeadline>
               <SGrid>
-                <SThumbnail>
+                <SThumbnail href='./###'>
                   <img src={ImgProject1} alt='Project1の画像' />
                   <SPProject>PROJECT01</SPProject>
                 </SThumbnail>
-                <SThumbnail>
+                <SThumbnail href='./###'>
                   <img src={ImgProject2} alt='Project2の画像' />
                   <SPProject>PROJECT02</SPProject>
                 </SThumbnail>
-                <SThumbnail>
+                <SThumbnail href='./###'>
                   <img src={ImgProject3} alt='Project3の画像' />
                   <SPProject>PROJECT03</SPProject>
                 </SThumbnail>
-                <SThumbnail>
+                <SThumbnail href='./###'>
                   <img src={ImgProject4} alt='Project4の画像' />
                   <SPProject>PROJECT04</SPProject>
                 </SThumbnail>
@@ -75,17 +75,17 @@ export const Home = () => {
               <SHeadline>お問い合わせ</SHeadline>
               <SP>お問い合わせは下記からお願いいたします。</SP>
               <SContactItems>
-                <SContactItem>
+                <SContactItem href='./###'>
                   <img src={ImgDocument} alt='資料請求ロゴ' />
                   <p>資料請求 </p>
                   <STriangle />
                 </SContactItem>
-                <SContactItem>
+                <SContactItem href='./###'>
                   <img src={ImgSeminar} alt='web説明会ロゴ' />
                   <p>web説明会 </p>
                   <STriangle />
                 </SContactItem>
-                <SContactItem>
+                <SContactItem href='./###'>
                   <img src={ImgTalk} alt='個別相談ロゴ' />
                   <p>個別相談</p>
                   <STriangle />
@@ -99,8 +99,13 @@ export const Home = () => {
   )
 }
 
+const SH1 = styled.div`
+  position: absolute;
+  z-index: -100;
+`
+
 const SDiv = styled.div`
-  width: calc(100% - 300px);
+  width: calc(100% - 280px);
   margin-top: 600px;
   ${({ theme }) => theme.media.tb`
   width: 100%;
@@ -135,8 +140,8 @@ const SWrapper = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   ${({ theme }) => theme.media.tb`
-  margin-left: 20px;
-  margin-left: 20px;
+  // margin-left: 20px;
+  // margin-left: 20px;
   width: calc(100% - 40px)
   `};
 `
@@ -197,7 +202,7 @@ const SGrid = styled.div`
   grid-template-columns: 1fr 
   `};
 `
-const SThumbnail = styled.div`
+const SThumbnail = styled.a`
   position: relative;
   border: 1px solid #fff;
 `
@@ -266,7 +271,7 @@ const SContactItems = styled.div`
   `};
 `
 
-const SContactItem = styled.div`
+const SContactItem = styled.a`
   border: solid 1px #121212;
   justify-content: center;
   display: flex;
